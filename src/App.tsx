@@ -35,14 +35,14 @@ export default function App() {
     if (readings.length < 4) {
       return "Coming soon";
     } else {
-      let totalDistance = 0;
+      let totalDifference = 0;
       for (let i = 1; i < 4; i++) {
-        const distance = readings[i - 1].value - readings[i].value;
-        totalDistance += distance;
+        const difference = readings[i - 1].value - readings[i].value;
+        totalDifference += difference;
       }
 
-      const averageDistance = totalDistance / 3;
-      return readings[0].value + averageDistance;
+      const averageDifference = totalDifference / 3;
+      return readings[0].value + averageDifference;
     }
   };
 
