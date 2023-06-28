@@ -47,7 +47,8 @@ describe("App", () => {
 
     expect(predictedUsageField).toHaveTextContent("Coming soon");
   });
-  test("submit five customer readings, with a predicted usage next month", () => {
+
+  test("correct prediction usage calculation", () => {
     const app = render(<App />);
     const input = getByTestId(app.container, "input-field");
     fireEvent.change(input, { target: { value: "00100" } });
