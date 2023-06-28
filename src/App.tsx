@@ -33,7 +33,7 @@ export default function App() {
 
   const calculatePrediction = () => {
     if (readings.length < 4) {
-      return "Coming soon";
+      return "Coming soon.";
     } else {
       let totalDifference = 0;
       for (let i = 1; i < 4; i++) {
